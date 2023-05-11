@@ -13,16 +13,14 @@ for i in range(1, len(tab)):
         else:
             lenght_check = len(a)
         k = 0
-        print(lenght_check)
-        print(b[k],a[k])
-        while lenght_check>=0: 
-            lenght_check -= 1
-            if b[k] > a[k]:  #Coś tu nie działa nwm dlaczego, psycha siedzi...
+        for k in range(lenght_check):
+            if int(b[k]) > int(a[k]):
                 tab[j] = a
                 tab[x] = b
-                print(tab, a, b)
+                print(tab, a, b, x, j, k)
                 break
-            k += 1
+            elif int(b[k]) < int(a[k]):
+                break
         j -= 1
         x -= 1
 print(tab)
