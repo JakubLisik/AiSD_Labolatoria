@@ -1,4 +1,4 @@
-values = input("Wprowadź wartości do tablicy: ")
+values = input("Wprowadź wartości do tablicy (kolejne wartości po spacji): ")
 
 tab = values.split()
 
