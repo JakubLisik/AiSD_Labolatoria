@@ -17,7 +17,7 @@ for i in range(1, len(tab)):
             if int(b[k]) > int(a[k]):
                 tab[j] = a
                 tab[x] = b
-                print(tab, a, b, x, j, k)
+                # print(tab, a, b, x, j, k)
                 break
             elif int(b[k]) < int(a[k]):
                 break
