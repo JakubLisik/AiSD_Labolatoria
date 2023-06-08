@@ -12,6 +12,8 @@ def wyznacz(i,j):
             elif x>0 and y>0:
                 Tab[x][y] = (Tab[x-1][y]+Tab[x][y-1])/2
 
+Tab = wyznacz(5,5)
+
 for row in Tab:
     print('    '.join([str(elem) for elem in row]))
 
