@@ -34,6 +34,6 @@ def parChecker(symbolString):
     if error and s.isEmpty() : return True
     else: return False
 
-print(parChecker('((()))'))
-print(parChecker('((())))))'))
-print(parChecker('((()(()()()()))())'))
+print(parChecker('((()))')) #True
+print(parChecker('((())))))')) #Fales
+print(parChecker('((()(()()()()))())')) #True
