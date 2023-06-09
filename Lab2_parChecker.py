@@ -25,14 +25,15 @@ def parChecker(symbolString):
     error = True
     while index < len(symbolString) and error:
         symbol = symbolString[index]
-        if symbol=="(": s.push(symbol)
+        if symbol=="(" or symbol=="[" or symbol=="{": s.push(symbol)
         else:
             if s.isEmpty(): error=False
-            else: s.pop()
+            elif (symbol==")" and s.peek()=="(") or (symbol=="]" and s.peek()=="[") or (symbol=="}" and s.peek()=="{"): s.pop()
+            else: error=False
         index += 1
     if error and s.isEmpty() : return True
     else: return False
 
 print(parChecker('((()))'))
 print(parChecker('((())))))'))
-print(parChecker('(((()()()())))'))
+print(parChecker('((()(()()()()))())'))
